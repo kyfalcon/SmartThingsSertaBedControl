@@ -106,7 +106,7 @@ script:
 ```
 Next we need to create the ui elements which will trigger the scripts.
 
-From the Home Assistant Main Overview Page click the three dot menu button in the upper right corner and select configure UI. Then click the + button to add a card, select the Verticle Stack. Click the Show Code Editor in the bottom left corner. And paste the following in the editor and then hit save.
+From the Home Assistant Main Overview Page click the three dot menu button in the upper right corner and select configure UI(![Image](configureUI.png)). Then click the + button to add a card(![Image](plusButton.png)), select the Vertical Stack. Click the Show Code Editor in the bottom left corner(![Image](verticalStack.png)). And paste the following in the editor and then hit save.
 ```
 cards:
   - cards:
@@ -241,7 +241,7 @@ cards:
 title: Bed Remote
 type: vertical-stack
 ```
-That should give you the buttons needed to contol the bed.
+That should give you the buttons needed to contol the bed(![Image](BedRemoteCard.png)).
 
 
 ## Google Home
@@ -293,6 +293,6 @@ google_assistant:
 
 ```
 Once you save the configuration.yaml and restart Home Assistant simply ask Google to resync devices.
-You can then use a voice command like Hey Google Activate lounge.  I found it even better to create routines, such as Bed Head Up that calls Activate Head Up. That way I can say Hey Google Bed Head Up, which is much more natural.
+You can then use a voice command like *Hey Google Activate Lounge*.  I found it even better to create routines in Google Home, such as Bed Head Up that calls Activate Head Up. That way I can say *Hey Google Bed Head Up*, which is much more natural.
 
 Good Luck and Enjoy!
