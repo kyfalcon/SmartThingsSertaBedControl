@@ -2,7 +2,7 @@
 
 ## CC2500 to NodeMcu Pin Connections
 ```
-* Pin Connections
+ *  Pin Connections
  * CC2500     NodeMCU 
  * VDD    ->      3V3
  * SI     ->      D7
@@ -248,7 +248,8 @@ That should give you the buttons needed to contol the bed.
 
 If you would like to use google home to control your bed using voice commands you need to have Home Assistant setup to communicate with Google Home. Look here for setup instructions, https://www.home-assistant.io/integrations/google_assistant/. Once Home Assistant is setup for Google you can edit your configuration.yaml's Google Assistant section to look like the following.
 
-```google_assistant:
+```
+google_assistant:
   project_id: home-assistant-2019-5156c
   service_account:
     private_key: -----BEGIN PRIVATE KEY----- Example - Your Private Key Here\n-----END PRIVATE KEY-----\n
@@ -289,6 +290,7 @@ If you would like to use google home to control your bed using voice commands yo
     script.tvpc:
       name: Bed TV PC
       expose: true
+
 ```
 Once you save the configuration.yaml and restart Home Assistant simply ask Google to resync devices.
 You can then use a voice command like Hey Google Activate lounge.  I found it even better to create routines, such as Bed Head Up that calls Activate Head Up. That way I can say Hey Google Bed Head Up, which is much more natural.
