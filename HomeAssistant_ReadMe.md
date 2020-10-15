@@ -1,6 +1,6 @@
-#NodeMcu, Home Assistant, MQTT and Google Home
+# NodeMcu, Home Assistant, MQTT and Google Home
 
-##CC2500 to NodeMcu Pin Connections
+## CC2500 to NodeMcu Pin Connections
 ```
 * Pin Connections
  * CC2500     NodeMCU 
@@ -12,7 +12,7 @@
  * CSn    ->      D8
 ```
 
-##NodeMcu_BedControl.ino
+## NodeMcu_BedControl.ino
 
 The file NodeMcu_SertaBedControl.ino contains the code to build the bed remote using a NodeMcu module and MQTT. This can be used in a Home Assisant setup. In this setup MQTT is used by Home Assistant to publish commands to a **bed/command** topic which the nodeMCU will subscribe to. Feel free to change the topic. But if you do, the topic in the ino must match that in your Home Assistant configuration.yaml. You must edit the ino file, the below fields must be changed to your wifi and mqtt connection info.
 
@@ -26,7 +26,7 @@ The file NodeMcu_SertaBedControl.ino contains the code to build the bed remote u
 ```
 Once you have loaded the NodeMcu with the program we can now move onto setting up the remote in Home Assistant.
 
-##Home Assistant Setup
+## Home Assistant Setup
 This next section assumes you have already setup MQTT in Home Assistant. If not there is plenty of info on doing that on the Home Assistant website.
 In your Home Assistant configuration.yaml file add the following scripts(you can also place them in the scripts.yaml if you are using it). This will setup scripts to publish the commands to the mqtt bed/command topic.
 ```
@@ -244,7 +244,7 @@ type: vertical-stack
 That should give you the buttons needed to contol the bed.
 
 
-##Google Home
+## Google Home
 
 If you would like to use google home to control your bed using voice commands you need to have Home Assistant setup to communicate with Google Home. Look here for setup instructions, https://www.home-assistant.io/integrations/google_assistant/. Once Home Assistant is setup for Google you can edit your configuration.yaml's Google Assistant section to look like the following.
 
